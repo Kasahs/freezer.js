@@ -1,0 +1,30 @@
+{
+  "name": "freezejs",
+  "version": "1.0.0",
+  "description": "deeply freeze js objects and some related utils",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kasahs/freezejs.git"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "Object.freeze"
+  ],
+  "author": "shasak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kasahs/freezejs/issues"
+  },
+  "homepage": "https://github.com/Kasahs/freezejs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.6",
+    "tap": "^10.5.0",
+    "typescript": "^2.4.0"
+  }
+}

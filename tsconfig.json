@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": false,
+        
+        "sourceMap": true,
+        "newLine": "LF",
+        "declaration": true,
+        //"allowSyntheticDefaultImports": true
+        //"emitDecoratorMetadata": true,
+        "experimentalDecorators": true    ,
+        "baseUrl": "src",
+        "paths": {
+            "common-entity/*": ["../../common-entity/*"]
+        },
+        "strictNullChecks": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}
