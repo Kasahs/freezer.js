@@ -4,7 +4,7 @@
   "description": "deeply freeze js objects and some related utils",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha -r ts-node/register src/**/test.ts"
   },
   "repository": {
     "type": "git",
@@ -22,9 +22,17 @@
   },
   "homepage": "https://github.com/Kasahs/freezejs#readme",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
+    "@types/lodash": "^4.14.74",
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.29",
+    "chai": "^4.1.2",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.1.6",
-    "tap": "^10.5.0",
+    "lodash": "^4.17.4",
+    "mocha": "^3.5.3",
+    "ts-node": "^3.3.0",
     "typescript": "^2.4.0"
-  }
+  },
+  "dependencies": {}
 }
