@@ -4,7 +4,20 @@
   "description": "deeply freeze js objects and some related utils",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -r ts-node/register src/**/test.ts"
+    "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive src/**/test.ts"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "exclude": [
+      "**/*.d.ts"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "all": true
   },
   "repository": {
     "type": "git",
@@ -29,8 +42,11 @@
     "chai": "^4.1.2",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.1.6",
+    "istanbul": "^0.4.5",
     "lodash": "^4.17.4",
     "mocha": "^3.5.3",
+    "nyc": "^11.2.1",
+    "source-map-support": "^0.4.18",
     "ts-node": "^3.3.0",
     "typescript": "^2.4.0"
   },

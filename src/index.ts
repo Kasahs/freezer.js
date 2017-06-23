@@ -6,7 +6,11 @@ const _freeze = <T>(obj: T): T => {
 			typeof obj[prop] === 'function'
 		let propIsFrozen = Object.isFrozen(obj[prop])
 
-		if (obj.hasOwnProperty(prop) && !propIsNull && propIsFunctionOrObject && !propIsFrozen) {
+		if (
+			obj.hasOwnProperty(prop) && 
+			!propIsNull && 
+			propIsFunctionOrObject && !propIsFrozen
+		) {
 			_freeze(obj[prop])
 		}
 	})
