@@ -1,5 +1,5 @@
 import {expect, assert} from 'chai'
-import * as freezer from '../index'
+import * as freezer from './freezer'
 function dummy(){
     let obj = {
         a: 1, 

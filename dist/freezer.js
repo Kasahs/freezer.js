@@ -7,7 +7,9 @@ var _freeze = function (obj) {
         var propIsFunctionOrObject = typeof obj[prop] === 'object' ||
             typeof obj[prop] === 'function';
         var propIsFrozen = Object.isFrozen(obj[prop]);
-        if (obj.hasOwnProperty(prop) && !propIsNull && propIsFunctionOrObject) {
+        if (obj.hasOwnProperty(prop) &&
+            !propIsNull &&
+            propIsFunctionOrObject && !propIsFrozen) {
             _freeze(obj[prop]);
         }
     });
