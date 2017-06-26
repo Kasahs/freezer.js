@@ -1,6 +1,11 @@
+sudo: false
 language: node_js
 node_js:
- - "node"
- - "8"
+  - 8
+script: 
+  - npm test
 after_success:
-  "npm run tsc"
+  - npm run report-coverage
+  - npm run tsc
+env:
+  - CODECOV_TOKEN="3fe4baf3-bbe1-4a80-ad8c-181f250f5887"
