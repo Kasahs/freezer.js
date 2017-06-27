@@ -1,6 +1,7 @@
 import {expect, assert} from 'chai'
+import {cloneDeep} from 'lodash'
 import * as freezer from './freezer'
-function dummy(){
+const dummy = () => {
     let obj = {
         a: 1, 
         b: 2, 
@@ -20,7 +21,7 @@ function dummy(){
     return obj
 }
 
-describe('Freeze method', () => {
+describe('Freeze function', () => {
     it('should ensure nested object is frozen. Properties can not updated or added', () => {
         let testObj = dummy()
         freezer.freeze(testObj)
@@ -62,5 +63,32 @@ describe('Freeze method', () => {
         expect(fail).to.throw(TypeError)
     })
 
+    it('should have _isDeepFrozen', () => {
+        let testObj = dummy()
+        expect(testObj['_isDeepFrozen']).to.be.equal(undefined)
+        freezer.freeze(testObj)
+        expect(testObj['_isDeepFrozen']).to.be.equal(true)
+    })
 
+
+})
+
+describe('pureFreeze function', () => {
+    let desc = 
+    it(
+        'should not affect passed object ' +
+        'and returned object should be frozen', 
+        () => {
+            let testObj = dummy()
+            let newObj = freezer.pureFreeze(testObj, cloneDeep)
+            function fail(){
+                newObj['new-prop'] = 'new-value'
+            }
+            expect(fail).to.throw(Error)
+            testObj['new-prop'] = 'new-val'
+            expect(testObj['new-prop'] === 'new-val')
+            expect(newObj['_isDeepFrozen']).to.be.equal(true)
+            expect(testObj['_isDeepFrozen']).to.be.equal(undefined)
+        }
+    )
 })
