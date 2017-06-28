@@ -6,6 +6,5 @@ script:
   - npm test
 after_success:
   - npm run report-coverage
-  - npm run tsc
 env:
   - CODECOV_TOKEN="3fe4baf3-bbe1-4a80-ad8c-181f250f5887"
