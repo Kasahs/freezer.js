@@ -9,3 +9,6 @@ coverage
 
 #editors
 .vscode/
+
+#env
+.env

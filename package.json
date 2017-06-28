@@ -16,7 +16,7 @@
     ],
     "exclude": [
       "**/*.spec.ts",
-      "**/*.d.ts"  
+      "**/*.d.ts"
     ],
     "include": [
       "src/**/*.ts"
@@ -61,7 +61,6 @@
     "mocha": "^3.5.3",
     "nyc": "^11.2.1",
     "source-map-support": "^0.4.18",
-    "travis-cli": "^1.0.9",
     "ts-node": "^3.3.0",
     "typescript": "^2.4.0"
   },
