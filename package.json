@@ -2,12 +2,13 @@
   "name": "freezejs",
   "version": "1.0.0",
   "description": "deeply freeze js objects and some related utils",
-  "main": "index.js",
+  "main": "./dist/freezer.js",
   "scripts": {
     "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive src/**/*.spec.ts",
     "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
     "tsc": "tsc --project ./tsconfig.json"
   },
+  "types": "./dist/freezer.d.ts",
   "nyc": {
     "extension": [
       ".ts",
@@ -32,7 +33,13 @@
   "keywords": [
     "javascript",
     "typescript",
-    "Object.freeze"
+    "Object.freeze",
+    "deep freeze object",
+    "nested freeze object",
+    "freeze object",
+    "freeze",
+    "freezer",
+    "deep freeze"
   ],
   "author": "shasak",
   "license": "MIT",
