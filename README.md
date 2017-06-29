@@ -1,5 +1,6 @@
 [![Build](https://travis-ci.org/Kasahs/freezer.js.svg?branch=master)](https://travis-ci.org/Kasahs/freezer.js)
 [![codecov.io](https://codecov.io/github/Kasahs/freezer.js/coverage.svg?branch=master)](https://codecov.io/github/Kasahs/freezer.js?branch=master)
+[![npm version](https://badge.fury.io/js/freezerjs.svg)](https://badge.fury.io/js/freezerjs)
 ## Freezer.js   
 ### `object.freeze()` for all nested properties
 Object.freeze doesn't freeze nested objects.  
