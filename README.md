@@ -7,18 +7,26 @@ freeze.js is a lib written in typescript 2.0 which provides functions for deeply
 
 ### Usage
 ```ts
+/* 
+Assuming strict mode.
+If strict mode is not active the lines that throw errors will fail silently in some envs
+*/
 import * as freezer from 'freezer'
-import {cloneDeep} from lodash
+import {cloneDeep} from 'lodash'
 
 function dummy(){
 	let obj = {a:1, nested: {p:1, q:2}}
 	return obj	
 }
+// with normal Object.freeze 
+let obj = Object.freeze(dummy())
+obj.nested['new-key'] = 'new-value' // this works
+obj.nested.a = 5 // this works
 
-Object.freeze(dummy())
-obj.nested['new-key'] = 'new-value' // this works which is why we need Freezer.js
-freezer.freeze(dummy())
-obj.nested['new-key'] = 'new-value' // now this will throw type error
+//but we want a deep freeze so use freezerjs:
+freezer.freeze(obj)
+obj.nested['new-key'] = 'new-value' // throws error
+obj.nested.a = 8 // throws error
 
 /*
 There is also a pureFreeze method. 
