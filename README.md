@@ -12,7 +12,7 @@ freeze.js is a lib written in typescript 2.0 which provides functions for deeply
 Assuming strict mode.
 If strict mode is not active the lines that throw errors will fail silently in some envs
 */
-import * as freezer from 'freezer'
+import * as freezer from 'freezerjs'
 import {cloneDeep} from 'lodash'
 
 function dummy(){
