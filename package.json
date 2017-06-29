@@ -1,7 +1,7 @@
 {
-  "name": "freezejs",
+  "name": "freezerjs",
   "version": "1.0.0",
-  "description": "deeply freeze js objects and some related utils",
+  "description": "deeply freeze Javascript objects",
   "main": "./dist/freezer.js",
   "scripts": {
     "test": "nyc mocha --require ts-node/register --require source-map-support/register --recursive src/**/*.spec.ts",
