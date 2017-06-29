@@ -1,6 +1,6 @@
 {
   "name": "freezerjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "deeply freeze Javascript objects",
   "main": "./dist/freezer.js",
   "scripts": {
